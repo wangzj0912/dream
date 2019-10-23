@@ -1,6 +1,7 @@
 package com.financeserver.financeserver.wzj.finance.fegin;
 
 import com.financeserver.financeserver.wzj.finance.model.User;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,4 +23,11 @@ public interface UserFeign {
     @PostMapping(value = "/user/postUserTest")
     @ResponseBody
     public User postUserTest(@RequestBody User user) throws Exception;
+
+
+    @PostMapping(value = "/user/testRequestBody")
+    public void testRequestBody(@RequestBody String message)throws Exception;
+
+    @PostMapping(value = "/user/testRequestParam")
+    public void testRequestParam(@RequestParam String message)throws Exception;
 }
