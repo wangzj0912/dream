@@ -44,7 +44,7 @@ public class ThreadPoolController {
         log.info("test end");
     }
 
-    // 定长线程池 如果超出个数则等待
+    // 定时线程池
     @PostMapping(value = "/scheduledThreadPoolTest")
     public void scheduledThreadPoolTest(){
 

@@ -1,6 +1,7 @@
 package com.userserver.userserver.wzj.user.controller;
 
 import com.userserver.userserver.wzj.user.model.User;
+import feign.Param;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
@@ -51,6 +52,24 @@ public class UserController {
         log.info("post 请求，有参修改 " + user.getName());
 
         return user;
+    }
+//==========================================================================
+
+
+    @PostMapping(value = "/testRequestBody")
+    @ApiOperation(value = "测试RequestBody")
+    public void testRequestBody(@RequestBody String message){
+        log.info("post 请求one，参数： " + message);
+        System.out.println("post 请求one，参数： " + message);
+
+    }
+
+    @PostMapping(value = "/testRequestParam")
+    @ApiOperation(value = "测试RequestParam")
+    public void testRequestParam(@RequestParam String message){
+        log.info("post two，参数： " + message);
+        System.out.println("post two，参数： " + message);
+
     }
 
 }
