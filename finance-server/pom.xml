@@ -72,7 +72,7 @@
             <artifactId>quartz-jobs</artifactId>
         </dependency>
 
-        <!--po的依赖-->
+        <!--poi的依赖-->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
@@ -85,7 +85,7 @@
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>i
+            <artifactId>poi-ooxml</artifactId>
             <version>3.17</version>
         </dependency>
         <dependency>
@@ -97,6 +97,18 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>23.0</version>
+        </dependency>
+
+        <!--rabbitMQ的依赖-->
+        <!--此版本与spring boot 1.5.9版本匹配-->
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>4.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
         </dependency>
 
     </dependencies>

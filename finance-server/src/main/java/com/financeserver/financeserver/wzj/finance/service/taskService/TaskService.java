@@ -20,7 +20,6 @@ public class TaskService {
         // 通过JobBuilder构建JobDetail实例，JobDetail规定只能是实现Job接口的实例
         // JobDetail 是具体Job实例
         JobDetail jobDetail = JobBuilder.newJob(jobClass).withIdentity(name, group).build();
-
         // 基于表达式构建触发器
         CronScheduleBuilder cronScheduleBuilder = CronScheduleBuilder.cronSchedule(cron);
         // CronTrigger表达式触发器 继承于Trigger

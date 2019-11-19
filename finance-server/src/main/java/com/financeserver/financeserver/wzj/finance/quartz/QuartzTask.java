@@ -22,10 +22,9 @@ public class QuartzTask {
     @PostConstruct
     public void task()throws SchedulerException {
         log.info("线程开始" + new Date());
-        System.out.println("线程开始33333333333");
 
         // 从数据库中查出需要批量执行的数据
-//        taskService.sendTask(TestTaskService.class, "testService", "testGroup", "0/5 * * * * ?");
+        taskService.sendTask(TestTaskService.class, "testService", "testGroup", "0/5 * * * * ?");
 
         log.info("线程结束" + new Date());
     }

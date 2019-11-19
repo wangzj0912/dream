@@ -15,7 +15,6 @@ public class QuartzConfig {
 
     @Bean
     public Scheduler scheduled()throws SchedulerException {
-
         log.info("bulid Scheduler start");
         // 创建一个Scheduler
         // 获取调度器
