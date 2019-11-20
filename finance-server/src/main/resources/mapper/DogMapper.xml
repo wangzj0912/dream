@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.financeserver.wzj.finance.mapper.DogMapper">
+
+<resultMap id="BaseResultMap" type="com.financeserver.wzj.finance.model.Dog">
+    <id property="id" column="id" jdbcType="INTEGER"/>
+    <result property="name" column="name" jdbcType="VARCHAR"/>
+    <result property="desc" column="desc" jdbcType="VARCHAR"/>
+</resultMap>
+
+<sql id="Base_Column_List">
+        id, name, desc
+    </sql>
+
+    <select id="selectListAll" parameterType="com.financeserver.wzj.finance.model.Dog" resultMap="BaseResultMap">
+
+        select
+        <include refid="Base_Column_List"/>
+        from dog
+    </select>
+
+</mapper>

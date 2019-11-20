@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: finance-server
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: yjts9tian
+    url: jdbc:postgresql://192.168.20.170:5432/smart-inventory?currentSchema=task
+    username: yjts
 
 eureka:
   client:
